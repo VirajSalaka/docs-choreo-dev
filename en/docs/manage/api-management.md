@@ -18,7 +18,7 @@ The **Consumers** pane shows us the applications that have subscribed to your AP
 
 ## Documents
 
-API documentation is vital in helping API consumers understand the functionality of your API and is beneficial to marketing the API. The Choreo Console allows you to add a document on the fly by entering a name and the API contents. You can also preview the document and verify if it is suitable for publishing. 
+API documentation is vital in helping API consumers understand the functionality of your API and is beneficial to marketing the API. The Choreo Console allows you to add a document on the fly by entering a name and the API contents. 
 
 ## Usage Plans
 

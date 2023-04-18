@@ -101,6 +101,7 @@ nav:
       - API Security:
          - Pass End-User Attributes to the Backend: manage/api-security/pass-end-user-attributes-to-the-backend.md
       - API Rate Limiting: manage/api-rate-limiting.md
+      - Documentation: manage/documentation.md
   - Consume:
       - Developer Portal Overview: consume/developer-portal.md
       - Manage Application: consume/manage-application.md
