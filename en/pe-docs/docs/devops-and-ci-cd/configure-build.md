@@ -7,7 +7,7 @@ Choreo has built in CI pipeline so that the developers and platform engineers do
 
 You can trigger a build from past commit or the latest commit.
 
-1. In the Choreo Console top navigation menu, select the  **Organization**, then the **Project** list and finally the relevant **Component**. 
+1. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** and finally the relevant **Component**. 
 2. In the left navigation menu, click **DevOps** and then click **CI Pipelines**. 
 3. On the **CI Pipelines** page, click **Build Latest**.
 
@@ -40,7 +40,7 @@ To view details of a specific build, click **View Details** corresponding to the
 
 With Auto Build on Commit, you can configure the build pipeline to be triggered once a new commit is available in the repository's selected branch. 
 
-1. In the Choreo Console top navigation menu, select the  **Organization**, then the **Project** list and finally the relevant **Component**. 
+1. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** list and finally the relevant **Component**. 
 2. In the left navigation menu, click **DevOps** and then click **CI Pipelines**. 
 3. On the **CI Pipelines** page, toggle **Auto Build on Commit** radio button.
 
@@ -52,7 +52,7 @@ With Auto Build on Commit, you can configure the build pipeline to be triggered 
 
 To configure build pipeline for a component,
 
-1. In the Choreo Console top navigation menu, select the  **Organization**, then the **Project** list and finally the relevant **Component**. 
+1. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** list and finally the relevant **Component**. 
 2. In the left navigation menu, click **DevOps** and then click **CI Pipelines**. 
 3. On the **CI Pipelines** page, toggle on **Auto Build on Commit** to enable the feature.
 

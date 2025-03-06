@@ -19,7 +19,7 @@ You can connect Bitbucket, Gitlab repositories to choreo organization using a Pe
 1. Sign in to the [Choreo Console](https://console.choreo.dev/).
 2. In the Choreo Console header, go to the **Organization** list and select your organization. 
 3. In the left navigation menu, click **Infrastructure** and then click **Credentials**. 
-5. Click **+Import Credentials** to configure the Git repository connection.
+5. Under **Git Credentials** tab, click **+Import Credentials** to configure the Git repository connection.
 6. Enter a **Credential Name**, select the Git provider, and enter the **Personal Access Token** you obtained from the Git provider.
 7. Click **Save**.  
 

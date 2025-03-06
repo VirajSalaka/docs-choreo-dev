@@ -75,20 +75,21 @@ nav:
   - Home: index.md
   - Introduction:
       - Overview: overview.md
-      - Key Concepts: ""
+  - Concepts: ""    
   - Getting Started:
       - Prerequisites: ""
       - Quickstart Guide: ""
-      - Onboarding Checklist: ""
-  - Create: ""
+  - Infrastructure: 
+      - Configure Private Dataplane
+      - Configure Domain
   - DevOps and CICD:
       - Continuous Integration:
           - Set Up Git Provider Authentication for Choreo : develop-components/develop-components-with-git.md
           - Configure Choreo CI Pipeline: devops-and-ci-cd/configure-build.md
-          - Bring your own Container Registry: ""
       - Continuous Deployment:
-          - Manage Environments: ""
           - Deploying an Application: ""
+          - Deploying an Application from External CI: develop-components/bring-your-own-image.md
+          - Manage Environments: devops-and-ci-cd/manage-environments.md
       - Rollback and Recovery: ""
       - Manage Configurations: ""
       - Kubernetes Configurations:
