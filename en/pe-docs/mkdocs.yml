@@ -93,8 +93,8 @@ nav:
       - Manage Application Configurations: devops-and-ci-cd/manage-configurations-and-secrets.md
       - Kubernetes Configurations:
           - View Runtime Details: ""
-          - Configure Container Resources, Commands, and Arguments: ""
-          - Set Up Health Checks: ""
+          - Configure Container Resources, Commands, and Arguments: devops-and-ci-cd/configure-container-resources-commands-and-arguments.md
+          - Set Up Health Checks: devops-and-ci-cd/set-up-health-checks.md
           - Autoscale:
               - Autoscale Component Replicas: ""
               - Autoscale Components with Scale-to-Zero: ""

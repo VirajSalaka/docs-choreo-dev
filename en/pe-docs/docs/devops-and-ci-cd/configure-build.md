@@ -52,7 +52,7 @@ With Auto Build on Commit, you can configure the build pipeline to be triggered 
 
 To configure build pipeline for a component,
 
-1. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** and finally the relevant **Component**. 
+1. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** and finally the relevant **Component**.
 2. In the left navigation menu, click **DevOps** and then click **CI Pipelines**. 
 3. On the **CI Pipelines** page, toggle on **Auto Build on Commit** to enable the feature.
 
