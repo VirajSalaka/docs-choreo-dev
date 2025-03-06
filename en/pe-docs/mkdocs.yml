@@ -83,8 +83,8 @@ nav:
   - Create: ""
   - DevOps and CICD:
       - Continuous Integration:
-          - Configure Git/BitBucket/Gitlab: ""
-          - Build using inbuilt CI Pipeline: ""
+          - Set Up Git Provider Authentication for Choreo : develop-components/develop-components-with-git.md
+          - Configure Choreo CI Pipeline: devops-and-ci-cd/configure-build.md
           - Bring your own Container Registry: ""
       - Continuous Deployment:
           - Manage Environments: ""
