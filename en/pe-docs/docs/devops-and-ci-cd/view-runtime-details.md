@@ -5,8 +5,8 @@ In Choreo, you can view details about running replicas of a component in a speci
 To view the runtime details of a component, follow the steps given below:
 
 1. Sign in to the [Choreo Console](https://console.choreo.dev/).
-2. In the **Component Listing** pane, click on the component for which you want to view runtime details.
-3. In the left navigation menu, click **DevOps** and then click **Runtime**. This opens the **Runtime** page populated with data retrieved from the underlying Choreo data plane.
+2. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** and finally the relevant **Component** for which you want to view runtime details.
+3. In the left navigation menu, click **K8s Operations** and then click **Runtime**. This opens the **Runtime** page populated with data retrieved from the underlying Choreo data plane.
 
 ![Runtime details](../assets/img/devops-and-ci-cd/runtime/runtime-view.png){.cInlineImage-full}
 

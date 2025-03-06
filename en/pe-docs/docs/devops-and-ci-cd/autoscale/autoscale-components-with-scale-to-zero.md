@@ -28,9 +28,9 @@ Upon the next request to the deployed service, a replica will be created to serv
 To enable scale-to-zero for service components created before February 23, 2024, follow the steps given below:
 
 1. Sign in to the [Choreo Console](https://console.choreo.dev/).
-2. In the **Component Listing** pane, click on the component you want to scale-to-zero. 
+2. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** and finally the relevant **Component** you want to scale-to-zero. 
 3. Make sure the component is deployed to an environment and is ready to receive traffic.
-4. In the left navigation menu, click **DevOps** and then click **Scaling**.
+4. In the left navigation menu, click **k8s Operations** and then click **Scaling**.
 
     - **If you are a free user**, you will see a view similar to the one below. You can click the **scale-to-zero** card to enable scale-to-zero for your component.
 

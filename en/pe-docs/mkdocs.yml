@@ -92,12 +92,12 @@ nav:
           - Manage Environments: devops-and-ci-cd/manage-environments.md
       - Manage Application Configurations: devops-and-ci-cd/manage-configurations-and-secrets.md
       - Kubernetes Configurations:
-          - View Runtime Details: ""
+          - View Runtime Details: devops-and-ci-cd/view-runtime-details.md
           - Configure Container Resources, Commands, and Arguments: devops-and-ci-cd/configure-container-resources-commands-and-arguments.md
           - Set Up Health Checks: devops-and-ci-cd/set-up-health-checks.md
           - Autoscale:
-              - Autoscale Component Replicas: ""
-              - Autoscale Components with Scale-to-Zero: ""
+              - Autoscale Component Replicas: autoscale/autoscale-component-replicas.md
+              - Autoscale Components with Scale-to-Zero: autoscale/autoscale-components-with-scale-to-zero.md
           - Configure Storage: ""
   - Monitoring:
       - Cost Analysis: ""
