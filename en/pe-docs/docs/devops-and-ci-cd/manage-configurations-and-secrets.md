@@ -22,8 +22,8 @@ Choreo considers all configurations and secrets to be sensitive content when sto
 Follow these steps to apply a file mount to a component you have created:
 
 1. Sign in to the [Choreo Console](https://console.choreo.dev/).
-2. In the **Component Listing** pane, click on the component for which you want to define configurations and secrets.
-3. In the left navigation menu, click **DevOps** and then click **Configs & Secrets**.
+2. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** and finally the relevant **Component**.
+3. In the left navigation menu, click **K8s Operations** and then click **Configs & Secrets**.
 4. Click **+ Create**.
 5. In the **Create a Config or Secret** pane, click **File Mount**.
 6. If you want to create the file mount as a secret, select **Mark as a Secret**. Otherwise, proceed to the next step.
@@ -57,8 +57,8 @@ Follow these steps to apply a file mount to a component you have created:
 Follow these steps to apply environment variables to a component you have created:
 
 1. Sign in to the [Choreo Console](https://console.choreo.dev/).
-2. In the **Component Listing** pane, click on the component for which you want to define configurations and secrets.
-3. In the left navigation menu, click **DevOps** and then click **Configs & Secrets**.
+2. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** and finally the relevant **Component**.
+3. In the left navigation menu, click **K8s Operations** and then click **Configs & Secrets**.
 4. Click **+ Create**.
 5. In the **Create a Config or Secret** pane, click **Environment Variables**.
 6. If you want to create the environment variable values as secrets, select **Mark as a Secret**. Otherwise, proceed to the next step.
@@ -82,8 +82,8 @@ Follow these steps to apply environment variables to a component you have create
 Follow these steps to update a configuration or secret you have defined:
 
 1. Sign in to the [Choreo Console](https://console.choreo.dev/).
-2. In the **Component Listing** pane, click on the component for which you want to update configurations and secrets.
-3. In the left navigation menu, click **DevOps** and then click **Configs & Secrets**.
+2. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** and finally the relevant **Component**.
+3. In the left navigation menu, click **K8s Operations** and then click **Configs & Secrets**.
 4. Click the edit icon corresponding to the configuration or secret you want to update.
 5. Apply the necessary changes and click **Save**.
 
@@ -92,14 +92,14 @@ Follow these steps to update a configuration or secret you have defined:
 Follow these steps to delete a configuration or secret you have defined:
 
 1. Sign in to the [Choreo Console](https://console.choreo.dev/).
-2. In the **Component Listing** pane, click on the component for which you want to delete configurations and secrets.
-3. In the left navigation menu, click **DevOps** and then click **Configs & Secrets**.
+2. In the Choreo Console top navigation menu, select the **Organization**, then the **Project** and finally the relevant **Component**.
+3. In the left navigation menu, click **K8s Operations** and then click **Configs & Secrets**.
 4. Click the delete icon corresponding to the configuration or secret you want to delete.
 5. Enter the name of the configuration or secret to confirm deletion.
 6. Click **Delete**.
 
-## Manage Ballerina configurables
-
+## Manage Ballerina configurables 
+<!-- TODO: (VirajSalaka) Check if this is valid -->
 Choreo manages the [Ballerina configurables](https://ballerina.io/learn/by-example/configurable-variables/) for the Ballerina components you create.
 
 When you deploy or promote a Ballerina application, you can modify the Ballerina configurables via the **Deploy** page.

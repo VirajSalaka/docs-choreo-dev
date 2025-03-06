@@ -85,13 +85,12 @@ nav:
   - DevOps and CICD:
       - Continuous Integration:
           - Set Up Git Provider Authentication for Choreo : develop-components/develop-components-with-git.md
-          - Configure Choreo CI Pipeline: devops-and-ci-cd/configure-build.md
+          - Configure and Run Choreo CI Pipeline: devops-and-ci-cd/configure-build.md
       - Continuous Deployment:
-          - Deploying an Application: ""
+          - Configure and Run Choreo CD Pipeline: ""
           - Deploying an Application from External CI: develop-components/bring-your-own-image.md
           - Manage Environments: devops-and-ci-cd/manage-environments.md
-      - Rollback and Recovery: ""
-      - Manage Configurations: ""
+      - Manage Application Configurations: devops-and-ci-cd/manage-configurations-and-secrets.md
       - Kubernetes Configurations:
           - View Runtime Details: ""
           - Configure Container Resources, Commands, and Arguments: ""
