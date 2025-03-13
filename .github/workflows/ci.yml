@@ -45,7 +45,7 @@ jobs:
           pip install mkdocs-include-markdown-plugin==1.0.0
           pip install mkdocs-open-in-new-tab==1.0.3
       - name: Build site developer
-        run: mkdocs build --config-file en/developer-docs/mkdocs.yml -d developer
+        run: mkdocs build --config-file en/developer-docs/mkdocs.yml -d site/developer
       - name: Deploy to gh-pages-dev-2 subdirectory
         run: |
           git fetch origin gh-pages-dev-2 || git checkout --orphan gh-pages-dev-2
@@ -59,7 +59,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
       - name: Build site
-        run: mkdocs build --config-file en/pe-docs/mkdocs.yml -d platform-engineer
+        run: mkdocs build --config-file en/pe-docs/mkdocs.yml -d site/platform-engineer
       - name: Deploy to gh-pages-dev-2 subdirectory
         run: |
           git fetch origin gh-pages-dev-2 || git checkout --orphan gh-pages-dev-2
