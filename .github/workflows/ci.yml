@@ -44,9 +44,31 @@ jobs:
           pip install mkdocs-glightbox==0.3.4
           pip install mkdocs-include-markdown-plugin==1.0.0
           pip install mkdocs-open-in-new-tab==1.0.3
-      - run: mkdocs gh-deploy --config-file en/developer-docs/mkdocs.yml --remote-branch gh-pages-dev-2 -d developer --force
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: mkdocs gh-deploy --config-file en/pe-docs/mkdocs.yml --remote-branch gh-pages-dev-2 -d platform-engineer --force
+      - name: Build site developer
+        run: mkdocs build --config-file en/developer-docs/mkdocs.yml -d developer
+      - name: Deploy to gh-pages-dev-2 subdirectory
+        run: |
+          git fetch origin gh-pages-dev-2 || git checkout --orphan gh-pages-dev-2
+          git checkout gh-pages-dev-2
+          rm -rf developer  # Clear existing directory if needed
+          mkdir -p developer
+          cp -r site/developer/* developer/
+          git add developer/
+          git commit -m "Deploy to product1 directory"
+          git push origin gh-pages-dev-2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    
+      - name: Build site
+        run: mkdocs build --config-file en/pe-docs/mkdocs.yml -d platform-engineer
+      - name: Deploy to gh-pages-dev-2 subdirectory
+        run: |
+          git fetch origin gh-pages-dev-2 || git checkout --orphan gh-pages-dev-2
+          git checkout gh-pages-dev-2
+          rm -rf platform-engineer  # Clear existing directory if needed
+          mkdir -p platform-engineer
+          cp -r site/platform-engineer/* platform-engineer/
+          git add platform-engineer/
+          git commit -m "Deploy to platform-engineer directory"
+          git push origin gh-pages-dev-2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}           
