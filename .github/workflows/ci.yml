@@ -50,10 +50,10 @@ jobs:
         run: mkdocs build --config-file en/pe-docs/mkdocs.yml 
       - name: Move site developer to tempDir
         run: |
-          mv en/developer-docs/site/developer/* /tmp/developer/
+          mv en/developer-docs/site/developer /tmp/developer
       - name: Move site platform-engineer to tempDir
         run: |
-          cp -r en/developer-docs/site/platform-engineer/* /tmp/platform-engineer/    
+          cp -r en/developer-docs/site/platform-engineer /tmp/platform-engineer    
       - name: Deploy to gh-pages-dev-2 subdirectory
         run: |
           git fetch origin gh-pages-dev-2 || git checkout --orphan gh-pages-dev-2
