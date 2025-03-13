@@ -14,6 +14,8 @@ jobs:
         run: |
           git config --global user.email "virajsalaka@gmail.com"
           git config --global user.name "VirajSalaka"
+      - name: Checkout code
+        uses: actions/checkout@v4    
       - uses: actions/setup-python@v5
         with:
           python-version: 3.12
@@ -62,8 +64,6 @@ jobs:
         run: mkdocs build --config-file en/pe-docs/mkdocs.yml -d site/platform-engineer
       - name: Deploy to gh-pages-dev-2 subdirectory
         run: |
-          git fetch origin gh-pages-dev-2 || git checkout --orphan gh-pages-dev-2
-          git checkout gh-pages-dev-2
           rm -rf platform-engineer  # Clear existing directory if needed
           mkdir -p platform-engineer
           cp -r site/platform-engineer/* platform-engineer/
