@@ -50,13 +50,19 @@ jobs:
         run: mkdocs build --config-file en/developer-docs/mkdocs.yml
       - name: Build site
         run: mkdocs build --config-file en/pe-docs/mkdocs.yml 
+      - name: Move site developer to tempDir
+        run: |
+          mv site/developer/* /tmp/developer/
+      - name: Move site platform-engineer to tempDir
+        run: |
+          cp -r site/platform-engineer/* /tmp/platform-engineer/    
       - name: Deploy to gh-pages-dev-2 subdirectory
         run: |
           git fetch origin gh-pages-dev-2 || git checkout --orphan gh-pages-dev-2
           git checkout gh-pages-dev-2
           rm -rf developer  # Clear existing directory if needed
           mkdir -p developer
-          cp -r site/developer/* developer/
+          cp -r /tmp/developer/* developer/
           git add developer/
           git commit -m "Deploy to product1 directory"
           git push origin gh-pages-dev-2
@@ -66,7 +72,7 @@ jobs:
         run: |
           rm -rf platform-engineer  # Clear existing directory if needed
           mkdir -p platform-engineer
-          cp -r site/platform-engineer/* platform-engineer/
+          cp -r /tmp/platform-engineer/* platform-engineer/
           git add platform-engineer/
           git commit -m "Deploy to platform-engineer directory"
           git push origin gh-pages-dev-2
