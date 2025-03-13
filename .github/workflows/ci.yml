@@ -13,9 +13,7 @@ jobs:
       - name: Configure Git Credentials
         run: |
           git config --global user.email "virajsalaka@gmail.com"
-          git config --global user.name "VirajSalaka"
-      - name: Checkout code
-        uses: actions/checkout@v4    
+          git config --global user.name "VirajSalaka" 
       - uses: actions/setup-python@v5
         with:
           python-version: 3.12
