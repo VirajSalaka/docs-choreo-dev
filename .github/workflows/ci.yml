@@ -45,7 +45,9 @@ jobs:
           pip install mkdocs-include-markdown-plugin==1.0.0
           pip install mkdocs-open-in-new-tab==1.0.3
       - name: Build site developer
-        run: mkdocs build --config-file en/developer-docs/mkdocs.yml
+        run: |
+          rm -rf developer  # Clear existing directory if needed
+          mkdocs build --config-file en/developer-docs/mkdocs.yml
       - name: Build site
         run: mkdocs build --config-file en/pe-docs/mkdocs.yml
       - name: Create/fetch gh-pages-v4
