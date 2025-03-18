@@ -185,6 +185,66 @@
    background-image: url('assets/img/home/background.svg') !important;
    background-position-y: -24rem;
 }
+
+/* Mobile responsiveness improvements */
+@media screen and (max-width: 76.1875em) {
+  .md-header {
+    height: auto !important;
+    min-height: 13.5rem;
+  }
+  
+  .section01 h1 {
+    font-size: 32px !important;
+    line-height: 36px !important;
+    padding-top: 1.5rem !important;
+    margin-bottom: 0.5rem !important; /* Reduce bottom margin */
+  }
+  
+  /* Reduce the height of the spacer div on mobile */
+  .md-container-home > div:first-of-type {
+    height: 2rem !important;
+  }
+  
+  /* Reduce vertical margins between sections */
+  .md_home_link_container {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .spacer_div_verticle {
+    height: 0.5rem !important;
+  }
+  
+  .md-search__inner-home {
+    width: 90% !important;
+    margin: 0 auto;
+  }
+  
+  .md-search__form-home {
+    width: 100% !important;
+  }
+  
+  .md-search__input-home {
+    width: 100% !important;
+  }
+  
+  .md_home_link_container_row {
+    flex-direction: column !important;
+  }
+  
+  .md_home_column {
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .spacer_div {
+    display: none !important;
+  }
+  
+  .md_home_link_container {
+    width: 100% !important;
+  }
+}
 </style>
 </header>
 {% endblock %}
@@ -201,8 +261,8 @@
 
   <div class="md-container-home data-md-component="container">
   <div style="height: 5rem;"></div>
-  <div class="row md_home_link_container_row">
-    <div class="md_home_column column">
+  <div class="row md_home_link_container_row" style="display: flex; flex-wrap: wrap;">
+    <div class="md_home_column column" style="flex: 1; min-width: 300px;">
       <!-- Start of first column-->
        <!--Start of 1st card- first column-->
       <div class= "md_home_link_container" >

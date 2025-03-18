@@ -116,11 +116,35 @@
     background-color: var(--md-accent-fg-color--transparent);
     color: var(--md-accent-fg-color);
 }
+
+/* Mobile adjustments */
+@media screen and (max-width: 76.1875em) {
+    .md-dropdown {
+        margin: 0.5rem 0;
+    }
+    
+    .md-dropdown__button {
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+    
+    .md-dropdown__menu {
+        width: 100%;
+        min-width: 150px;
+    }
+    
+    .md-dropdown__item {
+        font-size: 14px;
+        padding: 6px 6px;
+    }
+}
 </style>
 <!-- Add JavaScript for dropdown functionality -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const dropdown = document.querySelector('.md-dropdown');
+    if (!dropdown) return;
+    
     const button = dropdown.querySelector('.md-dropdown__button');
     
     button.addEventListener('click', function(e) {
