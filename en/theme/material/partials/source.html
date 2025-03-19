@@ -60,16 +60,26 @@
     justify-content: center;
     margin-top: 0.5rem;
   }
+  
+  /* Show both links, but hide all labels */
+  .md-source-link label {
+    display: none; /* Hide all labels on mobile for cleaner layout */
+  }
+  
+  /* Add some spacing between icons */
+  .md-source-link {
+    margin: 0 0.7rem;
+  }
 }
 
 /* Very small screens */
 @media screen and (max-width: 400px) {
   .md-source-links {
-    flex-direction: column;
+    flex-direction: row; /* Keep in a row even on very small screens */
   }
   
   .md-source-link {
-    margin: 0.25rem 0;
+    margin: 0.25rem 0.5rem;
   }
 }
 </style>

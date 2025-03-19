@@ -81,7 +81,7 @@
           {% include "partials/search.html" %}
         {% endif %}
         
-        <!-- Get Help link in first row -->
+        <!-- Get Help link -->
         <div class="md-source-link md-source-link--help">
           <a class="md-source" data-md-component="source" href="https://discord.com/invite/wso2">
             <div class="md-source__icon md-icon">
@@ -91,10 +91,8 @@
             <label>Get Help</label>
           </a>
         </div>
-      </div>
-      
-      <!-- Try Choreo link in second row -->
-      <div class="md-header__options-row md-header__options-row--secondary">
+        
+        <!-- Try Choreo link (moved to first row) -->
         <div class="md-source-link md-source-link--choreo">
           <a class="md-source" data-md-component="source" href="https://console.choreo.dev/login/">
             <div class="md-source__icon md-icon">
@@ -137,19 +135,13 @@
   <style>
     .md-header__options {
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      align-items: center;
     }
     
     .md-header__options-row {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
-    }
-    
-    .md-header__options-row--secondary {
-      justify-content: flex-end;
-      margin-top: 0.3rem;
+      flex-wrap: nowrap;
     }
     
     .md-source-link {
@@ -179,16 +171,13 @@
       .md-header__options {
         order: 3;
         width: 100%;
-        align-items: center;
+        justify-content: center;
         margin-bottom: 0.5rem;
       }
       
       .md-header__options-row {
         justify-content: center;
-      }
-      
-      .md-header__options-row--secondary {
-        margin-top: 0.5rem;
+        flex-wrap: wrap;
       }
       
       .md-source-link {
