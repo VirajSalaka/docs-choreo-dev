@@ -9,12 +9,17 @@
 {% endif %}
 <header class="{{ class }}" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
+    <!-- Logo/Home link -->
     <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
       {% include "partials/logo.html" %}
     </a>
+    
+    <!-- Mobile menu toggle -->
     <label class="md-header__button md-icon" for="__drawer">
       {% include ".icons/material/menu" ~ ".svg" %}
     </label>
+    
+    <!-- Site title and current page -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
@@ -34,10 +39,13 @@
       </div>
     </div>
     
+    <!-- Header options container -->
     <div class="md-header__options">
       <div class="md-header__options-row">
+        <!-- Perspective selector -->
         {% include "partials/perspective-selector.html" %}
         
+        <!-- Color palette switcher -->
         {% if not config.theme.palette is mapping %}
           <form class="md-header__option" data-md-component="palette">
             {% for option in config.theme.palette %}
@@ -52,6 +60,7 @@
           </form>
         {% endif %}
         
+        <!-- Language selector -->
         {% if config.extra.alternate %}
           <div class="md-header__option">
             <div class="md-select">
@@ -74,12 +83,23 @@
           </div>
         {% endif %}
         
+        <!-- Search button -->
         {% if "material/search" in config.plugins %}
           <label class="md-header__button md-icon" for="__search">
             {% include ".icons/material/magnify.svg" %}
           </label>
           {% include "partials/search.html" %}
         {% endif %}
+        
+        <!-- Try Choreo link -->
+        <div class="md-source-link md-source-link--choreo">
+          <a class="md-source" data-md-component="source" href="https://console.choreo.dev/login/">
+            <div class="md-source__icon md-icon">
+              {% include "assets/icons/choreo-logo.svg" %}
+            </div>
+            <label>Try Choreo</label>
+          </a>
+        </div>
         
         <!-- Get Help link -->
         <div class="md-source-link md-source-link--help">
@@ -91,74 +111,55 @@
             <label>Get Help</label>
           </a>
         </div>
-        
-        <!-- Try Choreo link (moved to first row) -->
-        <div class="md-source-link md-source-link--choreo">
-          <a class="md-source" data-md-component="source" href="https://console.choreo.dev/login/">
-            <div class="md-source__icon md-icon">
-              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              viewBox="0 0 224 165" style="enable-background:new 0 0 224 165;" xml:space="preserve">
-              <style type="text/css">
-                .st0{fill:#545CEC;}
-              </style>
-              <g>
-                <path class="st0" d="M223.42,34.79c-0.78-18.82-16.29-33.84-35.31-33.84H95.69L94.2,0.98C75.37,1.76,60.35,17.27,60.35,36.29
-                  l0,40.77l-22.44,0l-0.84-0.03c-5.28-0.4-9.33-4.55-9.33-9.48l0.01-30.38c6.43-3.05,10.87-9.61,10.87-17.19
-                  c0-10.51-8.52-19.03-19.03-19.03S0.55,9.47,0.55,19.98c0,7.59,4.44,14.14,10.87,17.19l0.01,30.53l0.03,1.16
-                  c0.62,13.79,12.29,24.67,26.46,24.67l22.44,0l0,35.19l0.03,1.49c0.78,18.82,16.29,33.84,35.31,33.84h92.42l1.49-0.03
-                  c18.82-0.78,33.84-16.29,33.84-35.31V36.29L223.42,34.79z M207.14,128.71l-0.03,1.16c-0.6,9.97-8.87,17.87-18.99,17.87H95.69
-                  l-1.16-0.03c-9.97-0.6-17.87-8.87-17.87-18.99V36.29l0.03-1.16c0.6-9.97,8.87-17.87,18.99-17.87h92.42
-                  c10.51,0,19.03,8.52,19.03,19.03V128.71z"/>
-                <path class="st0" d="M143.71,44.44c9.54,0,17.53,2.32,24.04,6.95c6.51,4.63,10.58,9.9,12.2,15.87c-2.36,3.34-4.31,5.22-5.86,5.64
-                  c-1.72,0.47-4.68-0.08-8.86-1.64c-1.11-3.58-3.62-6.67-7.54-9.34c-3.92-2.67-8.51-4-13.76-4c-7.25,0-13.17,2.39-17.75,7.09
-                  c-4.59,4.7-6.88,10.46-6.88,17.27c0,6.67,2.29,12.43,6.88,17.27c4.59,4.84,10.5,7.23,17.68,7.23c5.25,0,9.84-1.26,13.76-3.79
-                  c3.92-2.53,6.44-5.55,7.54-9.13c3.74-1.15,6.44-1.5,8.09-1.07c1.62,0.43,3.83,2.07,6.63,4.93c-1.63,5.83-5.62,11.02-12.06,15.66
-                  c-5.94,4.28-13.2,6.58-21.79,6.91l-2.17,0.04v0.21c-11.47,0-21.01-3.65-28.63-10.95c-7.62-7.3-11.39-16.36-11.39-27.17
-                  s3.77-19.87,11.32-27.1C122.71,48.09,132.25,44.44,143.71,44.44z"/>
-              </g>
-              </svg>       
-            </div>
-            <label>Try Choreo</label>
-          </a>
-        </div>
       </div>
     </div>
   </nav>
   
+  <!-- Navigation tabs (if enabled) -->
   {% if "navigation.tabs.sticky" in features %}
     {% if "navigation.tabs" in features %}
       {% include "partials/tabs.html" %}
     {% endif %}
   {% endif %}
   
-  <!-- Add responsive styles for header -->
+  <!-- Responsive styles for header -->
   <style>
+    /* Main header options container */
     .md-header__options {
       display: flex;
       align-items: center;
     }
     
+    /* Row of header options */
     .md-header__options-row {
       display: flex;
       align-items: center;
       flex-wrap: nowrap;
+      gap: 0.5rem;
     }
     
+    /* Source links (Try Choreo, Get Help) */
     .md-source-link {
-      margin: 0 0.5rem;
+      margin: 0 0.2rem;
     }
     
-    .md-source-link--help .md-source,
-    .md-source-link--choreo .md-source {
+    .md-source-link .md-source {
       display: flex;
       align-items: center;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
     }
     
-    .md-source-link--help .md-source__icon,
-    .md-source-link--choreo .md-source__icon {
+    .md-source-link .md-source:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+    
+    .md-source-link .md-source__icon {
       margin-right: 0.3rem;
     }
     
+    /* Tablet and smaller screens */
     @media screen and (max-width: 76.1875em) {
       .md-header__inner {
         flex-wrap: wrap;
@@ -178,25 +179,27 @@
       .md-header__options-row {
         justify-content: center;
         flex-wrap: wrap;
-      }
-      
-      .md-source-link {
-        margin: 0.25rem 0.5rem;
+        gap: 0.3rem;
       }
     }
     
-    @media screen and (max-width: 400px) {
+    /* Mobile screens */
+    @media screen and (max-width: 480px) {
       .md-header__title {
         max-width: calc(100% - 90px);
         font-size: 0.9rem;
       }
       
       .md-header__options-row {
-        flex-direction: column;
+        gap: 0.2rem;
       }
       
-      .md-source-link {
-        margin: 0.25rem 0;
+      .md-source-link .md-source {
+        padding: 0.1rem 0.3rem;
+      }
+      
+      .md-source-link .md-source label {
+        font-size: 0.8rem;
       }
     }
   </style>

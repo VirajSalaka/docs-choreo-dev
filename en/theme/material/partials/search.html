@@ -4,13 +4,26 @@
   <div class="md-search" data-md-component="search" role="dialog">
     <label class="md-search__overlay" for="__search"></label>
     <div class="md-search__inner" role="search">
-      <form class="md-search__form" name="search" id="search">
-        <input type="text" class="md-search__input" name="query" id="query" aria-label="{{ lang.t('search.placeholder') }}" placeholder="{{ lang.t('search.placeholder') }}" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-        <label class="md-search__icon md-icon" for="__search">
+      <form class="md-search__form" name="search" id="search" style="background-color: #ffffff; border-radius: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+        <input 
+          type="text" 
+          class="md-search__input" 
+          name="query" 
+          id="query" 
+          aria-label="{{ lang.t('search.placeholder') }}" 
+          placeholder="{{ lang.t('search.placeholder') }}" 
+          autocapitalize="off" 
+          autocorrect="off" 
+          autocomplete="off" 
+          spellcheck="false" 
+          data-md-component="search-query" 
+          required 
+          style="border-radius: 24px; padding: 14px 50px; font-size: 16px; width: 100%; -webkit-appearance: none;">
+        <label class="md-search__icon md-icon" for="__search" style="left: 15px; top: 50%; transform: translateY(-50%); padding: 8px;">
           {% include ".icons/material/magnify.svg" %}
           {% include ".icons/material/arrow-left.svg" %}
         </label>
-        <nav class="md-search__options" aria-label="{{ lang.t('search') }}">
+        <nav class="md-search__options" aria-label="{{ lang.t('search') }}" style="right: 15px;">
           {% if "search.share" in features %}
             <a href="javascript:void(0)" class="md-search__icon md-icon" title="{{ lang.t('search.share') }}" aria-label="{{ lang.t('search.share') }}" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
               {% include ".icons/material/share-variant.svg" %}
@@ -24,8 +37,8 @@
           <div class="md-search__suggest" data-md-component="search-suggest"></div>
         {% endif %}
       </form>
-      <div class="md-search__output" id="dropDownSearchResults">
-        <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__output" id="dropDownSearchResults" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); margin-top: 8px;">
+        <div class="md-search__scrollwrap" data-md-scrollfix style="padding: 12px 0;">
           <div class="md-search-result" data-md-component="search-result">
             <div class="md-search-result__meta">
               {{ lang.t("search.result.initializer") }}
